@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="container">
+        <h1>Weekly Schedule</h1>
+        <br>
+        <li class="tuck green">3 waiters on the shift </li>
+        <br>
+        <li class="tuck orange">less then 3 waiters on the shift</li><br>
+        <li class="tuck red">more than 3 waiters on the shift</li><br><br>
+
+        <div class="tuck">
+
+            <table>
+                <thead>
+                    <tr>
+                        {{#each list}}
+                        <th class="{{color}}">{{days}}</th>
+                        {{/each}}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {{#each list}}
+                        <td>{{waiters}}</td>
+                        {{/each}}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div class="pass">
+        <h3>
+            {{messages.pass}}
+        </h3>
+    </div><br>
+    <div class="container">
+        <a href="/reset">
+        <button type="button" >Reset</button>
+        </a>
+
+    </div><br>
+    <div>
+        <button><a href="/">back</a></button>
+    </div>
+</div>
+
+<script>
+    setTimeout(function () {
+        document.querySelector(".pass").innerHTML = ""
+    }, 1000)
+    setTimeout(function () {
+        document.querySelector(".error").innerHTML = ""
+    }, 1000)
+</script>
